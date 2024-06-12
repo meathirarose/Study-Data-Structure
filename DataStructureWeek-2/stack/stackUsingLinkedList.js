@@ -9,7 +9,7 @@ class stackLinkedList {
     constructor() {
         this.top = null;
         this.size = 0;
-    }
+    }    
 
     push(value){
         const node = new Node(value);
@@ -32,6 +32,16 @@ class stackLinkedList {
 
     peek(){
         return this.top.value;
+    }
+
+    pop(){
+        if (this.isEmpty()) {
+            console.log("the stack is empty");
+        }
+        const removeNode = this.top;
+        this.top = this.top.next;
+        this.size--;
+        return removeNode.value;
     }
 
     printStack(){
