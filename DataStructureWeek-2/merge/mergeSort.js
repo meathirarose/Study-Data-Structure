@@ -16,7 +16,7 @@ function merge(left, right) {
         if(left[0] < right[0]){
             sortedArray.push(left.shift());
         }else{
-            sortedArray.push(right.shift());
+            sortedArray.push(right.shift()); 
         }
     }
 
