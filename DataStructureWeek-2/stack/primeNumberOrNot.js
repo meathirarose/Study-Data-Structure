@@ -34,26 +34,27 @@ class Stack {
         }
     }
 
-    primeOrNot(value){
-        if(value <= 1) return false;
-        for(let i = 1; i<= Math.sqrt(value); i++){
-            if (value === 2 || value%i !== 0 && value%3 !==0 && value%2 !==0) return true;
-        }
-        return false;
-    }
-
 }
 
-function findPrimeOrNot(nums){
+function isPrime(num){
+    
+    if(num <=1)
+        return false;
+
     let stack = new Stack();
 
-    for(let i = 0; i<nums.length; i++){
-       if(stack.primeOrNot(nums[i]) === true)
-            stack.push(nums[i])
+    for(let i = 2; i<num; i++){
+        stack.push(i);
     }
-    return stack;
+
+    while (!stack.isEmpty()) {
+        let factor = stack.pop();
+        if(num%factor===0){
+            return false;
+        }
+    }
+    return true;
 }
 
-const nums = [2,13,15,17,19,12,10];
-const primeOrNot = findPrimeOrNot(nums);
+const primeOrNot = isPrime(24);
 console.log(primeOrNot);
