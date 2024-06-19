@@ -12,4 +12,4 @@ function selectionSort(array) {
     return array;
 }
 
-console.log(selectionSort(['arathi', 'athira', 'john','joseph', 'rose', 'irshad', 'dilu']));
+console.log(selectionSort(['athi', 'athira', 'john','joseph', 'rose', 'irshad', 'dilu']));
