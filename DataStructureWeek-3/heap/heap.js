@@ -14,6 +14,7 @@ function heapify(arr,n,i){
     if(left<n && arr[left]<arr[smallest]){
         smallest = left;
     }
+    
     if(right<n && arr[right]<arr[smallest]){
         smallest = right;
     }
@@ -24,7 +25,54 @@ function heapify(arr,n,i){
     }
 }
 
+function insert(arr, key){
+    arr.push(key);
+    let i = arr.length - 1;
+    
+    while (i > 0) {
+        let root = Math.floor((i-1)/2);
+        if(arr[root] <= arr[i]){
+            break;
+        }
+        [arr[i], arr[root]] = [arr[root], arr[i]];
+        i = root;
+    }
+}
+
+function deleteRoot(arr) {
+    let n = arr.length;
+    if (n === 0) {
+        return null;
+    }
+
+    let root = arr[0];
+    arr[0] = arr[n-1];
+    arr.pop();
+    n--;
+
+    heapify(arr, n, 0);
+    return root;
+}
+
+function findMin(arr) {
+    if (arr.length === 0) {
+        return null;
+    }
+    return arr[0];
+}
+
 let arr = [25,15,22,7,10,3,4];
-
+console.log('====================================================================================')
+console.log("after heapify & before insertion");
 console.log(buildMinHeap(arr));
-
+console.log('====================================================================================')
+insert(arr, 5);
+console.log("after insertion");
+console.log(buildMinHeap(arr));
+console.log('====================================================================================')
+let deletedElement = deleteRoot(arr);
+console.log("Deleted element:", deletedElement);
+console.log("Heap after deletion:", arr);
+console.log('====================================================================================')
+console.log("Minimum element :", findMin(arr));
+console.log('====================================================================================')
