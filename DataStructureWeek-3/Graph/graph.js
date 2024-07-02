@@ -5,7 +5,7 @@ class Graph{
 
     addVertex(data){
         if(!this.adList.has(data)){
-            this.adList.set(data, new Set())
+            this.adList.set(data, new Set());
         }
     }
 
@@ -15,7 +15,7 @@ class Graph{
         }
         this.addVertex(edge);
         const vertex1 = this.adList.get(vertex);
-        vertex1.add(edge)
+        vertex1.add(edge);
         if(isBirection){
             const vertex2 = this.adList.get(edge);
             vertex2.add(vertex);

@@ -9,6 +9,7 @@ class Trie{
     constructor(){
         this.root = new Node();
     }
+    
     insert(str){
         let node = this.root;
         for(let char of str){
