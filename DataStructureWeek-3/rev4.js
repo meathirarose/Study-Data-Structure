@@ -1,18 +1,19 @@
-class Node{
-    constructor(){
+class Node {
+    constructor() {
         this.children = {};
         this.isEnd = false;
     }
 }
 
-class Trie{
-    constructor(){
+class Trie {
+    constructor() {
         this.root = new Node();
     }
+
     insert(str){
         let node = this.root;
-        for(let char of str){
-            if(!node.children[char]){
+        for (const char of str) {
+            if (!node.children[char]) {
                 node.children[char] = new Node();
             }
             node = node.children[char];
@@ -22,7 +23,7 @@ class Trie{
 
     search(str){
         let node = this.root;
-        for(let char of str){
+        for (const char of str) {
             if(!node.children[char]){
                 return false;
             }
@@ -30,10 +31,11 @@ class Trie{
         }
         return node.isEnd;
     }
+
     searchWithPrefix(prefix){
         let result = [];
         let node = this.root;
-        for(let char of prefix){
+        for (const char of prefix) {
             if(!node.children[char]){
                 return result;
             }
@@ -47,16 +49,18 @@ class Trie{
         if(node.isEnd){
             result.push(prefix);
         }
-        for(let char in node.children){
-            this.collectWords(node.children[char], result, prefix+char);
+        for (const char in node.children) {
+            this.collectWords(node.children[char], result, prefix + char);
         }
     }
 }
 
-const t = new Trie()
-t.insert('apple')
-t.insert('app')
-t.insert('appllication')
-t.insert('appolo')
-console.log(t.search('aple'))
-console.log(t.searchWithPrefix('appl'))
+
+
+const trie = new Trie();
+trie.insert('apple');
+trie.insert('apply');
+trie.insert('application');
+console.log(trie);
+console.log(trie.search('aple'))
+console.log(trie.searchwithPrefix('appl'))
