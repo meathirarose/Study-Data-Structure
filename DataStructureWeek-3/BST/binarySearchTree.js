@@ -178,4 +178,4 @@ bst.levelOrder();
 console.log("Minimum value = ", bst.minValue(bst.root));
 console.log("Maximum value = ", bst.maxValue(bst.root));
 
-console.log(`Closest value to ${13} = `, bst.closestValue(13));
+console.log(`Closest value to ${13} = `, bst.closestValue(13)); 
