@@ -164,12 +164,7 @@ bst.insert(5);
 bst.insert(15);
 bst.insert(3);
 bst.insert(7);
-bst.insert(30);
-bst.insert(2);
-bst.insert(12);
-bst.insert(100);
-bst.insert(20);
-bst.insert(8);
+
 // console.log(bst.isEmpty());
 // console.log(bst.search(bst.root, 10));
 // console.log(bst.search(bst.root, 19));
@@ -191,4 +186,4 @@ bst.inOrder(bst.root);
 // console.log("Post Order");
 // bst.postOrder(bst.root);
 
-// console.log(`Closest value to ${13} = `, bst.closestValue(13)); 
+console.log(`Closest value to ${13} = `, bst.closestValue(13)); 
