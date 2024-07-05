@@ -30,3 +30,12 @@ class Tree {
         }
     }
 }
+
+const tree = new Tree();
+
+tree.insert(null, 'A');
+tree.insert('A', 'C');
+
+console.log(tree);
+
+
