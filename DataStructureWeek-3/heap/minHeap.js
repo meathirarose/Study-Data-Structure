@@ -61,18 +61,18 @@ function findMin(arr) {
     return arr[0];
 }
 
-let arr = [25,15,22,7,10,3,4];
+let arr = [10,15,30,40,50,100,40];
 console.log('====================================================================================')
 console.log("after heapify & before insertion");
 console.log(buildMinHeap(arr));
 console.log('====================================================================================')
-insert(arr, 5);
-console.log("after insertion");
-console.log(buildMinHeap(arr));
-console.log('====================================================================================')
-let deletedElement = deleteRoot(arr);
-console.log("Deleted element:", deletedElement);
-console.log("Heap after deletion:", arr);
-console.log('====================================================================================')
-console.log("Minimum element :", findMin(arr));
-console.log('====================================================================================')
+// insert(arr, 5);
+// console.log("after insertion");
+// console.log(buildMinHeap(arr));
+// console.log('====================================================================================')
+// let deletedElement = deleteRoot(arr);
+// console.log("Deleted element:", deletedElement);
+// console.log("Heap after deletion:", arr);
+// console.log('====================================================================================')
+// console.log("Minimum element :", findMin(arr));
+// console.log('====================================================================================')
