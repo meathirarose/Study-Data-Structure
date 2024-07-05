@@ -24,3 +24,4 @@ let root = new TrieNode();
 insertKey(root, "apple");
 insertKey(root, "application");
 insertKey(root, "apply");
+console.log(root);

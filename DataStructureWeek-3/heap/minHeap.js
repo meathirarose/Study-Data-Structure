@@ -11,11 +11,11 @@ function heapify(arr,n,i){
     let right = 2*i + 2;
     let smallest = i;
 
-    if(left<n && arr[left]<arr[smallest]){
+    if(left < n && arr[left] > arr[smallest]){
         smallest = left;
     }
     
-    if(right<n && arr[right]<arr[smallest]){
+    if(right < n && arr[right] > arr[smallest]){
         smallest = right;
     }
 
@@ -63,7 +63,7 @@ function findMin(arr) {
 
 let arr = [10,15,30,40,50,100,40];
 console.log('====================================================================================')
-console.log("after heapify & before insertion");
+console.log("after heapify");
 console.log(buildMinHeap(arr));
 console.log('====================================================================================')
 // insert(arr, 5);

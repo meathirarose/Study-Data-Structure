@@ -16,7 +16,7 @@ function heapify(arr, n, i) {
     }
     if(right < n && arr[right] > arr[largest]){
         largest = right;
-    }
+    }   
     if(largest !== i){
         [arr[i], arr[largest]] = [arr[largest], arr[i]];
         heapify(arr, n, largest);
