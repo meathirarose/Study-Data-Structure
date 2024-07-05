@@ -8,7 +8,7 @@ function dfs(graph, startNode) {
     while (stack.length > 0) {
         let currNode = stack.pop();
         result.push(currNode);
-        for(let neighbor of graph[currNode]){
+        for(let neighbor of graph[currNode]){  
             if(!visited.has(neighbor)){
                 visited.add(neighbor);
                 stack.push(neighbor);
