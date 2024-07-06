@@ -18,11 +18,13 @@ function dfs(graph, startNode) {
     return result;
 }
 
-const g = {
+const gh = {
     'A': ['B','D'],
     'B': ['C', 'D', 'A'],
     'C': ['D'],
     'D': ['C','A', 'B']
 }
 
-console.log(dfs(g, 'A'))
+console.log(dfs(gh, 'A'))
+
+

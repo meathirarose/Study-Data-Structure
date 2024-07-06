@@ -73,9 +73,7 @@ const g = new Graph();
 g.insert('A','B', true);
 g.insert('B','C', false);
 g.insert('C','D', true);
-g.insert('D','A', true);
+g.insert('D','E', true);
 g.display();
-console.log("bfs from starting node 'A'", g.bfs('A'));
+// console.log("bfs from starting node 'A'", g.bfs('A'));
 console.log("dfs from starting node 'A'", g.dfs('A'));
-
-

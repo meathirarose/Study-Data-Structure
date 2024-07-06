@@ -65,4 +65,4 @@ g.display();
 console.log("Shortest distance between A and C:", g.shortestDistance('A', 'C')); 
 console.log("Shortest distance between A and D:", g.shortestDistance('A', 'D')); 
 console.log("Shortest distance between B and D:", g.shortestDistance('B', 'D')); 
-console.log("Shortest distance between C and A:", g.shortestDistance('C', 'A')); 
+console.log("Shortest distance between C and A:", g.shortestDistance('C', 'A'));    
