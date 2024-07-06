@@ -30,6 +30,7 @@ class Trie{
         }
         return node.isEnd;
     }
+    
     searchWithPrefix(prefix){
         let result = [];
         let node = this.root;
