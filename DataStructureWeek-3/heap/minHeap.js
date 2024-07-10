@@ -11,11 +11,11 @@ function heapify(arr,n,i){
     let right = 2*i + 2;
     let smallest = i;
 
-    if(left < n && arr[left] > arr[smallest]){
+    if(left < n && arr[left] < arr[smallest]){
         smallest = left;
     }
     
-    if(right < n && arr[right] > arr[smallest]){
+    if(right < n && arr[right] < arr[smallest]){
         smallest = right;
     }
 
