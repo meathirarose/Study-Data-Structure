@@ -58,6 +58,32 @@ class Graph {
         }
         return result;
     }
+    shortestDistance(startVertex, targetVertex){
+        if (startVertex === targetVertex) {
+            return 0;
+        }
+        let queue = [startVertex];
+        let visited = new Set([startVertex]);
+        let distances = new Map([[startVertex, 0]]);
+
+        while (queue.length) {
+            let currentNode = queue.shift();
+            let currentDistance = distances.get(currentNode);
+            
+            for (const neighbor of this.adList.get(currentNode)) {
+                if (!visited.has(neighbor)) {
+                    visited.add(neighbor);
+                    queue.push(neighbor);
+                    distances.set(neighbor, currentDistance + 1);
+
+                    if (neighbor === targetVertex) {
+                        return distances.get(neighbor);
+                    }
+                }
+            }
+        }
+        return Infinity;
+    }
 }
 
 const graph = new Graph();
@@ -69,3 +95,4 @@ graph.insert('E', 'A', true);
 graph.displayGraph();
 console.log("bfs traversal= ", graph.bfs('A'));
 console.log("dfs traversal= ", graph.dfs('A'));
+console.log("shortest distance b/w A and D = ", graph.shortestDistance('A', 'D'));
