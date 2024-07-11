@@ -69,7 +69,7 @@ class Graph {
         while (queue.length) {
             let currentNode = queue.shift();
             let currentDistance = distances.get(currentNode);
-            
+
             for (const neighbor of this.adList.get(currentNode)) {
                 if (!visited.has(neighbor)) {
                     visited.add(neighbor);
@@ -77,7 +77,7 @@ class Graph {
                     distances.set(neighbor, currentDistance + 1);
 
                     if (neighbor === targetVertex) {
-                        return distances.get(neighbor);
+                        return distances.get(neighbor)
                     }
                 }
             }
