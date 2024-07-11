@@ -34,7 +34,7 @@ class Trie{
     searchWithPrefix(prefix){
         let result = [];
         let node = this.root;
-        for(let char of prefix){
+        for(let char of prefix){  
             if(!node.children[char]){
                 return result;
             }
