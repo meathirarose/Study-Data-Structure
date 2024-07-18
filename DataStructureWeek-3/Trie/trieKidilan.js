@@ -53,7 +53,7 @@ class Trie{
         }
     }
 }
-
+//initialize
 const t = new Trie()
 t.insert('apple')
 t.insert('app')
