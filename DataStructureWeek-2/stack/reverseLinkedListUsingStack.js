@@ -77,7 +77,7 @@ class Stack {
     }
 
 }
-
+//instantiate linked list
 const list = new LinkedList();
 list.append(32);
 list.append(27);

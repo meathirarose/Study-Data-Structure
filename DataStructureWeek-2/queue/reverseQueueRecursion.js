@@ -28,7 +28,7 @@ class Queue {
     }
 
 }
-
+//reverse queue using recursion
 function reverseQueue(queue) {
     if(queue.isEmpty()){
         return;
@@ -40,7 +40,7 @@ function reverseQueue(queue) {
 
     queue.enqueue(item);
 }
-
+//instantiate queue
 const queue = new Queue();
 queue.enqueue(23);
 queue.enqueue(34);
