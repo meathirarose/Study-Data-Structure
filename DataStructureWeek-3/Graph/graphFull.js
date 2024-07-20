@@ -2,7 +2,7 @@ class Graph {
     constructor(){
         this.adList = new Map();
     }
-
+    //add vertex and edge
     addVertex(data){
         if (!this.adList.has(data)) {
             this.adList.set(data, new Set());
@@ -27,7 +27,7 @@ class Graph {
             console.log(`${vertex} => ${[...edge]}`);
         }
     }
-
+    //breadth first traversal
     bfs(startNode){
         let result = [];
         let visited = new Set();
@@ -47,7 +47,7 @@ class Graph {
         }
         return result;
     }
-
+    //depth first traversal
     dfs(startNode){
         let result = [];
         let visited = new Set();
@@ -68,7 +68,7 @@ class Graph {
         return result;
     }
 }
-
+//instantiate graph
 const g = new Graph();
 g.insert('A','B', true);
 g.insert('B','C', false);
