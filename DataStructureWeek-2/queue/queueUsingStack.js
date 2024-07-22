@@ -43,7 +43,8 @@ class QueueUsingStacks {
     }
   }
   
-  // Usage
+  // Usage of queue
+
   const queue = new QueueUsingStacks();
   queue.enqueue(1);
   queue.enqueue(2);
