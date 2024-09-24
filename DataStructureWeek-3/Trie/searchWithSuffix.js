@@ -44,9 +44,9 @@ class Trie {
     
 }
 const trie = new Trie();
-trie.insert('applge');
+trie.insert('appge');
 trie.insert('orange');
 trie.insert('guava');
 trie.insert('apricot');
 console.log(trie);
-console.log(trie.searchWithSuffix('ge'));
+console.log(trie.searchWithSuffix('e'));

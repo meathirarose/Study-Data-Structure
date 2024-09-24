@@ -1,4 +1,15 @@
+function isSorted(nums){
+    for(let i = 1; i<nums.length; i++){
+        if(nums[i] > nums[i+1]){
+            return false;
+        }
+    }
+    return true;
+}
 function binarySearch(nums, target) {
+    if(!isSorted(nums)){
+        return "Array is not sorted";
+    }
     let left = 0;
     let right = nums.length - 1;
     
@@ -16,4 +27,4 @@ function binarySearch(nums, target) {
     return null;
 }
 
-console.log(binarySearch([2,4,6,7,8,9,10], 6));
+console.log(binarySearch([2,3,6,7,8,9,10], 6));   

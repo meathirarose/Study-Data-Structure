@@ -50,7 +50,8 @@ class linkedList {
         }
         if(index === 0){
             return this.prepend(value);
-        }else{
+        }else{ 
+
             const node = new Node(value);
             let previous = this.head;
             for(let i=0; i<index-1; i++){
