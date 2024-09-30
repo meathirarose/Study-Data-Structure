@@ -149,7 +149,7 @@ class BinarySearchTree {
         if(target < root.value){
             return this.findClosestValue(root.left, target, closest);
         }else if(target > root.value){
-            return this.findClosestValue(root.right, target, closest);
+            return this.findClosestValue(root.right, target, closest);5.
         }else{
             return closest;
         }
@@ -162,7 +162,9 @@ console.log(bst.isEmpty());
 bst.insert(10);
 bst.insert(5);
 bst.insert(15);
-bst.insert(5);
+bst.insert(5
+
+);
 bst.insert(7);
 
 // console.log(bst.isEmpty());
