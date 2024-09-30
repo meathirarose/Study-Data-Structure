@@ -149,10 +149,24 @@ class BinarySearchTree {
         if(target < root.value){
             return this.findClosestValue(root.left, target, closest);
         }else if(target > root.value){
-            return this.findClosestValue(root.right, target, closest);5.
+            return this.findClosestValue(root.right, target, closest);
         }else{
             return closest;
         }
+    }
+
+    findHeight(root){
+        if(root === null) return -1;
+        const leftHeight = this.findHeight(root.left);
+        const rightHeight = this.findHeight(root.right);
+        return Math.max(leftHeight, rightHeight) + 1;
+    }
+
+    isValidBST(root, min = null, max = null){
+        if(root === null) return true;
+        if(min !== null && root.value <= min) return false;
+        if(max !== null && root.value >= max) return false;
+        return this.isValidBST(root.left, min, root.value) && this.isValidBST(root.right, root.value, max);
     }
 
 }
@@ -162,10 +176,10 @@ console.log(bst.isEmpty());
 bst.insert(10);
 bst.insert(5);
 bst.insert(15);
-bst.insert(5
-
-);
+bst.insert(3);
 bst.insert(7);
+bst.insert(12);
+bst.insert(18);
 
 // console.log(bst.isEmpty());
 // console.log(bst.search(bst.root, 10));
@@ -189,3 +203,7 @@ bst.inOrder(bst.root);
 // bst.postOrder(bst.root);
 
 console.log(`Closest value to ${13} = `, bst.closestValue(13)); 
+
+console.log("Height of BST",bst.findHeight(bst.root));
+
+console.log("Is valid BST?", bst.isValidBST(bst.root));
