@@ -5,7 +5,6 @@ class Node {
         this.right = null;
     }
 }
-
 class BinarySearchTree {
     constructor() {
         this.root = null;
@@ -206,4 +205,4 @@ console.log(`Closest value to ${13} = `, bst.closestValue(13));
 
 console.log("Height of BST",bst.findHeight(bst.root));
 
-console.log("Is valid BST?", bst.isValidBST(bst.root));
+console.log("Is a valid BST?", bst.isValidBST(bst.root));

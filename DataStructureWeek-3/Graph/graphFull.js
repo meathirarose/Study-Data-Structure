@@ -8,7 +8,7 @@ class Graph {
             this.adList.set(data, new Set());
         }
     }
-
+ 
     insert(vertex, edge, isBirection){
         if (!this.adList.has(vertex)) {
             this.addVertex(vertex);
