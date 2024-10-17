@@ -3,10 +3,16 @@ const object = {
     name: 'athira',
     age: 28,
     "key-value": true,
-    someRandom : function (){
-        console.log(this.name);
+    someRandom : function (greeting){
+        console.log(`${greeting}, my name is ${this.name}`);
     }
 }
+
+const anotherobject = {
+    name: 'Rose'
+}
+
+object.someRandom.call(anotherobject, 'Hello');
 
 console.log("--------------------------");
 
