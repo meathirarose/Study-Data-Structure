@@ -31,7 +31,7 @@ function heapSort(arr) {
 
     for(let i = n-1; i>0; i--){
         [arr[0], arr[i]] = [arr[i], arr[0]];
-        heapify(arr, n, 0);
+        heapify(arr, i, 0);
     }
 
     return arr;

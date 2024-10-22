@@ -202,7 +202,6 @@ bst.inOrder(bst.root);
 // bst.postOrder(bst.root);
 
 console.log(`Closest value to ${13} = `, bst.closestValue(13)); 
-
 console.log("Height of BST",bst.findHeight(bst.root));
 
 console.log("Is a valid BST?", bst.isValidBST(bst.root));
